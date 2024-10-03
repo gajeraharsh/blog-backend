@@ -12,15 +12,10 @@ app.use(express.json());
 
 app.use("/api", blogRoutes);
 
-// gajeraharsh283
-// q9tChGArtCF57vMT
-
 const db_string = `mongodb+srv://gajeraharsh283:q9tChGArtCF57vMT@cluster0.k4qb1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 mongoose
-  .connect(db_string, {
-    useNewUrlParser: true,
-  })
+  .connect(db_string)
   .then((con) => {
     console.log("DB connection Successfully!");
   });
